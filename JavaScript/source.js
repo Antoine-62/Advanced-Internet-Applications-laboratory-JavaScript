@@ -1,5 +1,3 @@
-
-    var x = document.getElementById("add");
     function add() {
       
       var collection = document.getElementById("collection");
@@ -17,21 +15,39 @@
       }
       tr.setAttribute("id", id);	
 
-      var td = document.createElement("td")
+      var td = document.createElement("td");
+      td.style.padding="1%";
+      td.style.width="12%";
+      if(id%2 == 1)
+      {
+          td.style.backgroundColor="#F0F0F0";
+      }
       var Brand = document.createElement("input");
       Brand.setAttribute("type", "text");
       Brand.setAttribute("id","brand"+id);
       td.append(Brand);
       tr.append(td);
 
-      var td2 = document.createElement("td")
+      var td2 = document.createElement("td");
+      td2.style.padding="1%";
+      td2.style.width="12%";
+      if(id%2 == 1)
+      {
+          td2.style.backgroundColor="#F0F0F0";
+      }
       var Name = document.createElement("input");
       Name.setAttribute("id","name"+id);
       Name.setAttribute("type", "text");
       td2.append(Name);
       tr.append(td2);
 
-      var td3 = document.createElement("td")
+      var td3 = document.createElement("td");
+      td3.style.padding="1%";
+      td3.style.width="3%";
+      if(id%2 == 1)
+      {
+          td3.style.backgroundColor="#F0F0F0";
+      }
       var Save = document.createElement("button");
       Save.setAttribute("id","button"+id);
       Save.innerHTML = "Save"; 
@@ -39,7 +55,13 @@
       td3.append(Save);
       tr.append(td3);
 
-      var td4 = document.createElement("td")
+      var td4 = document.createElement("td");
+      td4.style.padding="1%";
+      td4.style.width="3%";
+      if(id%2 == 1)
+      {
+          td4.style.backgroundColor="#F0F0F0";
+      }
       var Remove = document.createElement("button");
       Remove.innerHTML = "Remove"; 
       Remove.setAttribute("onclick", "remove(" + id + ")");
